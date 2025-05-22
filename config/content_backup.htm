@@ -252,7 +252,32 @@ for i in all_stud:
 <p>製作影片:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0wXoUEa9w7I?si=lHgd8_UwtDHpYTjG" title="YouTube video player" width="400"></iframe></p>
 <p>轉動影片:</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oI66DC2qols?si=P8rwkQiT5g1wTMae" title="YouTube video player" width="400"></iframe></p><h2>Exam3</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/oI66DC2qols?si=P8rwkQiT5g1wTMae" title="YouTube video player" width="400"></iframe></p>
+<p>模擬程式:</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+ 
+def run_robot():
+    # Create the Robot instance
+    robot = Robot()
+ 
+    # Get simulation time step
+    timestep = int(robot.getBasicTimeStep())
+ 
+    # Get motor device
+    motor = robot.getDevice('motor')
+ 
+    # Set motor for continuous rotation
+    motor.setPosition(float('inf'))
+    motor.setVelocity(1.0)
+ 
+    # Main control loop
+    while robot.step(timestep) != -1:
+        pass
+ 
+if __name__ == "__main__":
+    run_robot()
+</pre>
+<p></p><h2>Exam3</h2>
 <p>Exam3 (20%): Webots 機電模擬場景的協同設計</p>
 <p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 Exam3 - 學員學號</p>
 <h1>Final</h1>
