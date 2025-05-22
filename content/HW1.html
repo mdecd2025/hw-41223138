@@ -149,7 +149,32 @@ img.add_border {
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uOLxICnDBq8?si=ISzdixpeSf7YZg8y" title="YouTube video player" width="400"></iframe></p>
 <p>轉動影片</p>
 <p></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/nCZGzYRAMA8?si=dFzjlodsWL7_tM2y" title="YouTube video player" width="400"></iframe></p><br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/nCZGzYRAMA8?si=dFzjlodsWL7_tM2y" title="YouTube video player" width="400"></iframe></p>
+<p>模擬程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+ 
+def run_robot():
+    # Create the Robot instance
+    robot = Robot()
+ 
+    # Get simulation time step
+    timestep = int(robot.getBasicTimeStep())
+ 
+    # Get motor device
+    motor = robot.getDevice('motor')
+ 
+    # Set motor for continuous rotation
+    motor.setPosition(float('inf'))
+    motor.setVelocity(1.0)
+ 
+    # Main control loop
+    while robot.step(timestep) != -1:
+        pass
+ 
+if __name__ == "__main__":
+    run_robot()
+</pre>
+<p></p><br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
         
     <!-- footer -->
       <div class="container">
