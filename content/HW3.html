@@ -149,7 +149,33 @@ img.add_border {
 <p>製作影片:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/u5BS1MxnjuU?si=sPArE4HsvBTgbY72" title="YouTube video player" width="400"></iframe></p>
 <p>發球機投球:</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kwlOWC5abEA?si=45VgwFukjivGBP_1" title="YouTube video player" width="400"></iframe></p><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kwlOWC5abEA?si=45VgwFukjivGBP_1" title="YouTube video player" width="400"></iframe></p>
+<p>心得:</p>
+<p>模擬程式:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+ 
+def run_robot():
+    # Create the Robot instance
+    robot = Robot()
+ 
+    # Get simulation time step
+    timestep = int(robot.getBasicTimeStep())
+ 
+    # Get motor and keyboard devices
+    motor = robot.getDevice('motor1')
+    keyboard = robot.getKeyboard()
+    keyboard.enable(timestep)
+ 
+    # Set initial motor position
+    initial_position = 0.0  # Assuming initial position is 0
+ 
+    # Main control loop
+    while robot.step(timestep) != -1:
+        motor.setPosition(38 * 3.14159 / 180)
+ 
+if __name__ == "__main__":
+    run_robot()</pre>
+<p></p><br />HW2 << <a href='HW2.html'>Previous</a> <a href='Midterm.html'>Next</a> >> Midterm</div>
         
     <!-- footer -->
       <div class="container">
